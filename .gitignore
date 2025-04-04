@@ -1,24 +1,22 @@
-# Ignore virtual environment
+# === Virtual Environments ===
 venv/
 .env/
 
-# Byte-compiled / cache
+# === Python Cache ===
 __pycache__/
-*.py[cod]
+*.pyc
 *.pyo
 
-# Logs and datasets
-logs/
-*.log
-*.csv
-*.json
-
-# Jupyter Notebook checkpoints
+# === Jupyter Notebook ===
 .ipynb_checkpoints/
 
-# System-specific files
+# === Logs & Output (folder saja) ===
+logs/
+*.log
+
+# === System Files ===
 .DS_Store
 Thumbs.db
 
-# VSCode settings (optional)
+# === VSCode ===
 .vscode/
