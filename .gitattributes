@@ -1,0 +1,8 @@
+# Treat all text files as UTF-8 and normalize line endings
+* text=auto eol=lf
+
+# Ensure Jupyter Notebooks are treated as binary (prevent diff mess)
+*.ipynb binary
+
+# Custom diff rules for Python (optional)
+*.py diff=python
