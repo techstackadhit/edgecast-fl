@@ -104,22 +104,27 @@ notebooks/analyze_federated_logs.ipynb
 
 ## 📊 Analyze Results
 
-After training, results are logged per client in `.csv` files (one per client) inside the `logs/` directory.
+After training, evaluation results and predictions are stored per client in `.csv` files inside the `logs/` directory.
 
 You can perform:
 
-- 📈 **Trend analysis**: RMSE per round
-- 🎯 **Ideal round detection**: using slope or moving average
-- 📊 **Client comparison**: consistency, convergence, and divergence across clients
+- 📈 **Trend analysis**: RMSE per round across all clients
+- 🎯 **Ideal round detection**: using slope or moving average heuristics
+- 📊 **Prediction evaluation**: compare predicted vs actual temperature per client
+- 🧪 **Error metrics**: MAE and RMSE comparison across clients
+- 📉 **Visual analysis**: line charts and bar plots of model performance
 
 ### Tools Used
-- **Notebook**: `notebooks/analyze_federated_logs.ipynb`
-- **Libraries**: Pandas, Matplotlib
+- **Notebooks**:
+  - `notebooks/analyze_federated_logs.ipynb` – convergence & round trends
+  - `notebooks/analyze_federated_predictions.ipynb` – prediction performance
+- **Libraries**: Pandas, Matplotlib, Scikit-learn
 
-The notebook generates:
-- RMSE curves
-- Summary tables
-- Insight texts (e.g., stable clients, round thresholds)
+The notebooks generate:
+- RMSE curves over training rounds
+- MAE/RMSE bar charts per client
+- Actual vs Predicted temperature plots
+- Summary tables and insight notes for further analysis
 
 ---
 
