@@ -9,7 +9,7 @@
 - Implement a Federated Learning pipeline using the [Flower](https://flower.dev/) framework.
 - Predict daily temperature using local weather data from Jakarta (2023–2024) (source:https://www.visualcrossing.com/weather-data/)
 - Compare model performance in centralized vs federated settings.
-- Analyze convergence behavior across IID and (future) non-IID data distributions (soon).
+- Analyze convergence behavior across IID and (future) non-IID data distributions.
 
 ---
 
