@@ -69,6 +69,15 @@ class FLClient(fl.client.NumPyClient):
             if f.tell() == 0:
                 writer.writerow(["round", "rmse"])
             writer.writerow([current_round, rmse])
+        
+        # Save predictions per client
+        pred_df = pd.DataFrame({
+            "actual_temp": y,
+            "predicted_temp": predictions
+        })
+
+        pred_df.to_csv(f"logs/{client_id}_predictions.csv", index=False)
+
 
         return rmse, len(X), {"rmse": rmse}
 
