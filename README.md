@@ -1,10 +1,10 @@
-# 🌤️ EdgeCast-FL: Federated Learning for Local Weather Forecasting
+# EdgeCast-FL: Federated Learning for Local Weather Forecasting
 
 **EdgeCast-FL** explores the implementation of **Federated Learning (FL)** for distributed weather prediction, simulating an edge computing environment using localized sensor data. Each client in the system represents a virtual edge node, collaboratively training a global model without sharing raw data—emulating real-world edge-based deployment scenarios in a controlled simulation setting.
 
 ---
 
-## 🎯 Objectives
+## Objectives
 
 - Implement a Federated Learning pipeline using the [Flower](https://flower.dev/) framework.
 - Predict daily temperature using local weather data from Jakarta (2023–2024) (source:https://www.visualcrossing.com/weather-data/)
@@ -13,7 +13,7 @@
 
 ---
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - Python 3.11+
 - [Flower](https://flower.dev/) for Federated Learning orchestration
@@ -24,7 +24,7 @@
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 edgecast-fl/
@@ -44,29 +44,29 @@ edgecast-fl/
 
 ---
 
-## 🧠 Models Used
+## Models Used
 
 This project focuses on **regression-based temperature prediction** using the following models:
 
-### 🔹 Centralized Baseline
+### Centralized Baseline
 - **Model**: Multi-layer Perceptron Regressor (MLPRegressor)
 - **Input**: Daily weather features (e.g., date, temp_min, humidity, etc.)
 - **Output**: Predicted temperature (next day)
 
-### 🔹 Federated Learning Model
+### Federated Learning Model
 - **Same model architecture as baseline**
 - Trained in a decentralized manner using:
   - **Federated Averaging (FedAvg)** strategy
   - Flower framework for simulation
 
-### 🔧 Model Notes
+### Model Notes
 - MLP is selected based on initial performance testing (outperformed Linear Regression)
 - Configurable hidden layers, activation functions, and learning rates
 - Model evaluation is tracked using **RMSE** across multiple rounds
 
 ---
 
-## ⚙️ Setup & Installation
+## Setup & Installation
 
 It's recommended to use a virtual environment:
 
@@ -82,7 +82,7 @@ pip install -r requirements.txt
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 ### 1. Start the Federated Server
 ```
@@ -102,17 +102,17 @@ notebooks/analyze_federated_logs.ipynb
 
 ---
 
-## 📊 Analyze Results
+## Analyze Results
 
 After training, evaluation results and predictions are stored per client in `.csv` files inside the `logs/` directory.
 
 You can perform:
 
-- 📈 **Trend analysis**: RMSE per round across all clients
-- 🎯 **Ideal round detection**: using slope or moving average heuristics
-- 📊 **Prediction evaluation**: compare predicted vs actual temperature per client
-- 🧪 **Error metrics**: MAE and RMSE comparison across clients
-- 📉 **Visual analysis**: line charts and bar plots of model performance
+- **Trend analysis**: RMSE per round across all clients
+- **Ideal round detection**: using slope or moving average heuristics
+- **Prediction evaluation**: compare predicted vs actual temperature per client
+- **Error metrics**: MAE and RMSE comparison across clients
+- **Visual analysis**: line charts and bar plots of model performance
 
 ### Tools Used
 - **Notebooks**:
@@ -128,37 +128,37 @@ The notebooks generate:
 
 ---
 
-## 🔍 Future Work / To-do
+## Future Work / To-do
 
 Here are several planned extensions and experiments:
 
-- 🔄 **Non-IID data simulation**  
+- **Non-IID data simulation**  
   Clients will be assigned seasonal data (e.g. dry vs rainy periods)
 
-- 🔁 **Strategy comparison**
+- **Strategy comparison**
   - FedAvg (current)
   - FedProx (to be added)
   - Other Flower-compatible strategies
 
-- 📊 **Centralized vs Federated benchmarking**
+- **Centralized vs Federated benchmarking**
   - Accuracy, convergence, stability
 
-- 🌐 **Web dashboard integration**
+- **Web dashboard integration**
   - Show RMSE trends
   - Notify on training completion
 
-- ⚡ **Model variations**
+- **Model variations**
   - Test Random Forest, XGBoost, LSTM (future)
 
 ---
 
-## 👤 Author / Credits
+## Author / Credits
 
 - **Author**: Aditya Arya Putranda
 - **Year**: 2025  
 - **Affiliation**: Independent Research 
 
-## 📄 License
+## License
 
 This project is licensed under the **MIT License** — you are free to use, modify, and distribute it with attribution.
 
