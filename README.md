@@ -1,6 +1,6 @@
 # EdgeCast-FL: Federated Learning for Local Weather Forecasting
 
-**EdgeCast-FL** explores the implementation of **Federated Learning (FL)** for distributed weather prediction, simulating an edge computing environment using localized sensor data. Each client in the system represents a virtual edge node, collaboratively training a global model without sharing raw data—emulating real-world edge-based deployment scenarios in a controlled simulation setting.
+**EdgeCast-FL** explores the implementation of **Federated Learning (FL)** for distributed weather prediction, simulating an edge computing environment using localized sensor data. Each client in the system represents a virtual edge node, collaboratively training a global model without sharing raw data. Emulating real-world edge-based deployment scenarios in a controlled simulation setting.
 
 ---
 
